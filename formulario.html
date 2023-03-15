@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer formulario</title>
+</head>
+<body>
+    <form action="procesar.html" method="get">
+        <fieldset>
+            <legend>Controles del formulario</legend>
+            <label for="usuario">Usuario: </label>
+            <input type="text" pattern="[A-Za-z]{0,5}" title="Ingresar un nombre de máximo 5 letras" value=" " id="usuario" name="usuario" placeholder="Ingrese usuario" >
+            <label for="email">Email: </label>
+            <input type="email" value=" " id="email" name="email" placeholder="Ingrese email" >
+            <label for="tel">Teléfono: </label>
+            <input type="tel" value=" " id="tel" name="tel" >
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha">
+            <label for="edad">Joven</label>
+            <input type="radio" id="joven "name="edad" value="0-25">
+            <label for="edad">Adulto</label>
+            <input type="radio" id="adulto" name="edad" value="26-55">
+            <br>
+            <br>
+            <label for="rango">Rango</label>
+            <input type="range" min="0" max="100" id="ingreso" name="ingreso">
+            <br>
+            <br>
+            <label for="terminos">Términos y referencias</label>
+            <input type="checkbox" id="terminos" name="terminos">
+            <br>
+            <br>
+            <select id="pais" name="pais">
+                <option value="CO">Colombia</option>
+                <option value="IS">Israel</option>
+                <option value="BR">Brasil</option>
+            </select>
+            <br>
+            <br>
+            <textarea name="datos" id="datos" cols="30" rows="10">
+                  <!--Preferible no usar los atributos de cols and rows-->
+            </textarea>
+            <input type="submit">
+            <button type="reset">Borrar</button>
+            <button type="submit">Enviar</button> <!--La diferencia entre el input y en button es que al button puede agregársele estilos y más-->
+            <br>
+            <br>
+            <button type="button" onclick="mostrarMsm()">Botón </button>
+            <br>
+            <br>
+            <button type="button" id="otroBoton">Botón 2 </button>
+        
+        </fieldset>
+    </form>
+    <script src="programa.js"></script>
+</body>
+</html>
